@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: classicmodels_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       classicmodels
+      POSTGRES_USER:     postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: text2sql_app
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      DB_HOST:           db
+      DB_PORT:           5432
+      DB_NAME:           classicmodels
+      DB_USER:           postgres
+      DB_PASSWORD:       postgres
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+    volumes:
+      - ./logs:/app/logs      # so logs persist outside container
+      - ./data:/app/data      # so CSV is always accessible
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

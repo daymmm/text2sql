@@ -1,0 +1,428 @@
+[
+  {
+    "timestamp": "2026-05-20T21:12:46.659220",
+    "question": "Show me all customers",
+    "decomposition": {
+      "intent": "Show me all customers",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 0
+  },
+  {
+    "timestamp": "2026-05-20T21:15:37.614679",
+    "question": "List all paymetns",
+    "decomposition": {
+      "intent": "List all paymetns",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 1
+  },
+  {
+    "timestamp": "2026-05-20T21:16:31.123041",
+    "question": "get all offices",
+    "decomposition": {
+      "intent": "get all offices",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 1
+  },
+  {
+    "timestamp": "2026-05-20T21:16:47.693590",
+    "question": "h",
+    "decomposition": {
+      "intent": "h",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 0
+  },
+  {
+    "timestamp": "2026-05-20T21:17:11.305778",
+    "question": "what is it even solving",
+    "decomposition": {
+      "intent": "what is it even solving",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 0
+  },
+  {
+    "timestamp": "2026-05-20T21:18:29.285743",
+    "question": "list all payments",
+    "decomposition": {
+      "intent": "list all payments",
+      "tables": [],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": null,
+      "_error": "GROQ_API_KEY not set in .env"
+    },
+    "sql_original": "SELECT * FROM customers LIMIT 10; -- fallback: generation error: GROQ_API_KEY not set in .env",
+    "sql_final": null,
+    "retry": false,
+    "status": "blocked",
+    "error": "Multiple statements detected (semicolon in query body)",
+    "rowcount": 0,
+    "latency_ms": 1
+  },
+  {
+    "timestamp": "2026-05-20T21:19:31.474967",
+    "question": "list all payments",
+    "decomposition": {
+      "intent": "list all payments",
+      "tables": [
+        "payments"
+      ],
+      "columns": [
+        "customerNumber",
+        "checkNumber",
+        "paymentDate",
+        "amount"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 10
+    },
+    "sql_original": "SELECT customerNumber, checkNumber, paymentDate, amount FROM payments LIMIT 10",
+    "sql_final": "SELECT customerNumber, checkNumber, paymentDate, amount FROM payments LIMIT 10;",
+    "retry": true,
+    "status": "failed",
+    "error": "Connection error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  role \"postgres\" does not exist\n",
+    "rowcount": 0,
+    "latency_ms": 1231,
+    "sql_fixed": "SELECT customerNumber, checkNumber, paymentDate, amount FROM payments LIMIT 10;"
+  },
+  {
+    "timestamp": "2026-05-20T21:25:40.035558",
+    "question": "List all products",
+    "decomposition": {
+      "intent": "list all products",
+      "tables": [
+        "products"
+      ],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 0
+    },
+    "sql_original": "SELECT * FROM products",
+    "sql_final": "SELECT * FROM products",
+    "retry": false,
+    "status": "success",
+    "error": null,
+    "rowcount": 110,
+    "latency_ms": 1889
+  },
+  {
+    "timestamp": "2026-05-20T21:26:59.281736",
+    "question": "List all payments",
+    "decomposition": {
+      "intent": "list all payments",
+      "tables": [
+        "payments"
+      ],
+      "columns": [
+        "customerNumber",
+        "checkNumber",
+        "paymentDate",
+        "amount"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 0
+    },
+    "sql_original": "SELECT customerNumber, checkNumber, paymentDate, amount FROM payments",
+    "sql_final": "SELECT \"customerNumber\", \"checkNumber\", \"paymentDate\", \"amount\" FROM payments",
+    "retry": true,
+    "status": "success",
+    "error": null,
+    "rowcount": 273,
+    "latency_ms": 1494,
+    "sql_fixed": "SELECT \"customerNumber\", \"checkNumber\", \"paymentDate\", \"amount\" FROM payments"
+  },
+  {
+    "timestamp": "2026-05-20T21:27:37.465032",
+    "question": "Average MSRP",
+    "decomposition": {
+      "intent": "calculate average MSRP",
+      "tables": [
+        "products"
+      ],
+      "columns": [
+        "MSRP"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "AVG",
+      "order_by": "none",
+      "limit": "none"
+    },
+    "sql_original": "SELECT AVG(MSRP) FROM products",
+    "sql_final": "SELECT AVG(\"MSRP\") FROM products",
+    "retry": true,
+    "status": "success",
+    "error": null,
+    "rowcount": 1,
+    "latency_ms": 852,
+    "sql_fixed": "SELECT AVG(\"MSRP\") FROM products"
+  },
+  {
+    "timestamp": "2026-05-20T21:27:43.487767",
+    "question": "Average MSRP",
+    "decomposition": {
+      "intent": "calculate average MSRP",
+      "tables": [
+        "products"
+      ],
+      "columns": [
+        "MSRP"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "AVG",
+      "order_by": "none",
+      "limit": "none"
+    },
+    "sql_original": "SELECT AVG(MSRP) FROM products",
+    "sql_final": "SELECT AVG(\"MSRP\") FROM products",
+    "retry": true,
+    "status": "success",
+    "error": null,
+    "rowcount": 1,
+    "latency_ms": 996,
+    "sql_fixed": "SELECT AVG(\"MSRP\") FROM products"
+  },
+  {
+    "timestamp": "2026-05-20T21:44:38.239898",
+    "question": "Show me all customers",
+    "decomposition": {
+      "intent": "retrieve all customers",
+      "tables": [
+        "customers"
+      ],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": "none"
+    },
+    "sql_original": "SELECT * FROM customers",
+    "sql_final": "SELECT * FROM customers",
+    "retry": false,
+    "status": "success",
+    "error": null,
+    "rowcount": 122,
+    "latency_ms": 1250
+  },
+  {
+    "timestamp": "2026-05-20T21:46:29.602656",
+    "question": "List all products",
+    "decomposition": {
+      "intent": "list all products",
+      "tables": [
+        "products"
+      ],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 0
+    },
+    "sql_original": "SELECT * FROM products",
+    "sql_final": "SELECT * FROM products",
+    "retry": false,
+    "status": "success",
+    "error": null,
+    "rowcount": 110,
+    "latency_ms": 1136
+  },
+  {
+    "timestamp": "2026-05-20T21:50:21.685977",
+    "question": "List all products",
+    "decomposition": {
+      "intent": "list all products",
+      "tables": [
+        "products"
+      ],
+      "columns": [
+        "*"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 0
+    },
+    "sql_original": "SELECT * FROM products",
+    "sql_final": "SELECT * FROM products",
+    "retry": false,
+    "status": "success",
+    "error": null,
+    "rowcount": 110,
+    "latency_ms": 1050
+  },
+  {
+    "timestamp": "2026-05-20T21:56:46.062739",
+    "question": "Number of employees",
+    "decomposition": {
+      "intent": "count employees",
+      "tables": [
+        "employees"
+      ],
+      "columns": [
+        "employeeNumber"
+      ],
+      "filters": [],
+      "joins": [],
+      "group_by": [],
+      "aggregation": "COUNT",
+      "order_by": "none",
+      "limit": "none"
+    },
+    "sql_original": "SELECT COUNT(employeeNumber) FROM employees",
+    "sql_final": "SELECT COUNT(\"employeeNumber\") FROM employees",
+    "retry": true,
+    "status": "success",
+    "error": null,
+    "rowcount": 1,
+    "latency_ms": 1102,
+    "sql_fixed": "SELECT COUNT(\"employeeNumber\") FROM employees"
+  },
+  {
+    "timestamp": "2026-05-20T21:56:55.659518",
+    "question": "Get orders with customer names",
+    "decomposition": {
+      "intent": "Retrieve orders with customer names",
+      "tables": [
+        "orders",
+        "customers"
+      ],
+      "columns": [
+        "orders.orderNumber",
+        "customers.customerName"
+      ],
+      "filters": [],
+      "joins": [
+        "orders.customerNumber = customers.customerNumber"
+      ],
+      "group_by": [],
+      "aggregation": "none",
+      "order_by": "none",
+      "limit": 10
+    },
+    "sql_original": "SELECT orders.orderNumber, customers.customerName \nFROM orders \nJOIN customers ON orders.customerNumber = customers.customerNumber \nLIMIT 10",
+    "sql_final": "SELECT o.orderNumber, c.customerName \nFROM orders o \nJOIN customers c ON o.customernumber = c.customernumber \nLIMIT 10",
+    "retry": true,
+    "status": "failed",
+    "error": "SQL error: column o.customernumber does not exist\nLINE 3: JOIN customers c ON o.customernumber = c.customernumber \n                            ^\nHINT:  Perhaps you meant to reference the column \"o.customerNumber\".\n",
+    "rowcount": 0,
+    "latency_ms": 1529,
+    "sql_fixed": "SELECT o.orderNumber, c.customerName \nFROM orders o \nJOIN customers c ON o.customernumber = c.customernumber \nLIMIT 10"
+  }
+]
